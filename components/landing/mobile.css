@@ -1,0 +1,518 @@
+/* Mobile presentation. Desktop section styling stays in globals.css. */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --gutter: clamp(20px, 6vw, 40px);
+  }
+
+  html {
+    scroll-padding-top: 20px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    margin-bottom: 22px;
+  }
+
+  .button {
+    min-height: 44px;
+    font-size: 11px;
+    padding: 12px 20px;
+  }
+
+  /* Compact navigation with a touch-friendly expandable menu. */
+  .site-header {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 16px var(--gutter);
+    gap: 12px;
+    border-bottom: 1px solid #ffffff1a;
+    background: linear-gradient(#080d10e6, #080d1099);
+  }
+
+  .site-header > a:first-child {
+    flex-shrink: 0;
+  }
+
+  .site-header .wordmark {
+    width: clamp(90px, 25vw, 120px);
+  }
+
+  .site-header > .button {
+    margin-left: auto;
+    min-height: 38px;
+    padding: 10px 12px;
+    font-size: 8px;
+    gap: 7px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    color: white;
+    border: 1px solid #ffffff40;
+    border-radius: 50%;
+    background: #ffffff08;
+    cursor: pointer;
+  }
+
+  .site-header .main-navigation {
+    display: none;
+    position: absolute;
+    inset: calc(100% + 8px) var(--gutter) auto;
+    width: auto;
+    padding: 12px 20px;
+    border: 1px solid #ffffff26;
+    border-radius: 16px;
+    background: #101719;
+    box-shadow: 0 16px 40px #0006;
+  }
+
+  .site-header .main-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .site-header .main-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #ffffff12;
+  }
+
+  .site-header .main-navigation a:last-child {
+    border-bottom: 0;
+  }
+
+  /* The image has its own breathing room below the main message. */
+  .hero {
+    min-height: 0;
+    height: auto;
+    max-height: none;
+  }
+
+  .hero-image {
+    inset: 220px 0 130px;
+  }
+
+  .hero-image img {
+    object-position: 62% 55%;
+  }
+
+  .hero-shade {
+    background: linear-gradient(180deg, #080d10 0%, #080d10f2 24%, #080d1040 49%, #080d1020 65%, #080d10 83%);
+  }
+
+  .hero-content {
+    padding: 120px var(--gutter) 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(35px, 8.6vw, 58px);
+    line-height: 1.04;
+    letter-spacing: 0;
+  }
+
+  .wordmark-large {
+    width: 260px;
+    max-width: 76%;
+    margin-bottom: 14px;
+  }
+
+  .hero-content > .red-rule {
+    margin: 20px 0;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 340px;
+    color: #e0e3e3;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-actions .button {
+    font-size: 10px;
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  .hero-features {
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: clamp(190px, 55vw, 300px);
+    padding-top: 24px;
+    border-top: 1px solid #ffffff26;
+    gap: 22px 14px;
+  }
+
+  .hero-features > div {
+    gap: 11px;
+  }
+
+  .hero-features .feature-icon {
+    width: 40px;
+    height: 40px;
+    color: #b9c0c0;
+  }
+
+  .hero-features p {
+    font-size: 10px;
+    line-height: 1.4;
+    max-width: none;
+  }
+
+  .hero-features small {
+    font-size: 9px;
+    color: #a4adad;
+  }
+
+  /* Copy first, then an unobstructed athlete image. */
+  .concept {
+    min-height: 0;
+    padding: 42px var(--gutter) 340px;
+  }
+
+  .concept-copy {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .concept-copy h2 {
+    font-size: clamp(32px, 8vw, 44px);
+    line-height: 1.08;
+  }
+
+  .concept-copy > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 400px;
+    margin: 20px 0;
+    color: #64696a;
+  }
+
+  .concept-copy .button {
+    min-height: 44px;
+    font-size: 10px;
+    padding: 12px 20px;
+  }
+
+  .concept-image {
+    inset: auto 0 0;
+    height: 300px;
+  }
+
+  .concept-image img {
+    object-position: 50% 35%;
+  }
+
+  .concept-fade {
+    inset: auto 0 0;
+    height: 300px;
+    background: linear-gradient(180deg, #f3f3f2, transparent 25%, #0007 100%);
+  }
+
+  .concept-mantra {
+    left: var(--gutter);
+    bottom: 24px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+    text-shadow: 0 1px 10px #0008;
+  }
+
+  .concept-mantra .red-rule {
+    margin-top: 12px;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
+    gap: 2px;
+  }
+
+  .activity {
+    min-height: 210px;
+  }
+
+  .activity + .activity {
+    margin-left: 0;
+    clip-path: none;
+  }
+
+  .activity:last-child {
+    grid-column: 1 / -1;
+    min-height: 230px;
+  }
+
+  .activity-caption {
+    left: 20px;
+    bottom: 22px;
+  }
+
+  .activity h2 {
+    font-size: 22px;
+  }
+
+  .activity p {
+    font-size: 10px;
+    max-width: none;
+    line-height: 1.5;
+  }
+
+  .product-range {
+    padding-top: 44px;
+    padding-bottom: 38px;
+    gap: 28px;
+  }
+
+  .range-copy h2 {
+    font-size: clamp(30px, 7.5vw, 42px);
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+  }
+
+  .range-copy .button {
+    margin-top: 22px;
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .products {
+    gap: 20px;
+    padding-bottom: 22px;
+  }
+
+  .product {
+    flex-basis: 80%;
+  }
+
+  .product h3 {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  .product p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 7px;
+  }
+
+  .ingredients {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .ingredients-copy {
+    padding: 0;
+  }
+
+  .ingredients h2 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .ingredients-copy > p:last-child {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #64696a;
+    max-width: 420px;
+    margin-top: 18px;
+  }
+
+  .caffeine {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 24px;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 24px;
+    background: #ffffff80;
+  }
+
+  .dose {
+    grid-row: span 2;
+    font-size: clamp(56px, 15vw, 78px);
+  }
+
+  .caffeine h3 {
+    align-self: end;
+    font-size: 18px;
+    margin: 0 0 5px;
+  }
+
+  .caffeine > p:last-child {
+    align-self: start;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .ingredient-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ingredient-features .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ingredient-features h3 {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+
+  .ingredient-details > p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 24px;
+    color: #707575;
+  }
+
+  .story {
+    padding-top: 42px;
+    padding-bottom: 36px;
+    gap: 36px;
+    background-position: 56% center;
+  }
+
+  .story h2 {
+    font-size: clamp(29px, 7.4vw, 40px);
+    line-height: 1.12;
+  }
+
+  .story-copy > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 420px;
+    margin: 18px 0;
+    color: #d4dada;
+  }
+
+  .story .button-white {
+    min-height: 44px;
+    font-size: 10px;
+    padding: 12px 20px;
+  }
+
+  .updates {
+    width: 100%;
+    max-width: none;
+    border-top: 1px solid #ffffff33;
+    padding-top: 28px;
+  }
+
+  .updates h2 {
+    font-size: 20px;
+  }
+
+  .updates > p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #d4dada;
+  }
+
+  .signup-fields {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .signup-fields input {
+    min-height: 50px;
+    font-size: 16px;
+    padding: 14px 16px;
+    background: #101719bb;
+  }
+
+  .signup-fields .button {
+    min-height: 48px;
+    font-size: 11px;
+  }
+
+  .signup-note {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
+  .footer {
+    padding: 36px var(--gutter) 26px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .footer .wordmark {
+    width: 120px;
+  }
+
+  .footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+    font-size: 12px;
+  }
+
+  .footer nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    border-bottom: 1px solid #ffffff12;
+  }
+
+  .footer .right {
+    width: 100%;
+    margin: 0;
+    align-items: flex-start;
+    border-top: 1px solid #ffffff26;
+    padding-top: 24px;
+    gap: 20px;
+  }
+
+  .footer .socials {
+    gap: 20px;
+  }
+
+  .footer .socials span,
+  .footer .socials svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer .legal {
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 11px;
+  }
+
+  .footer .copyright {
+    max-width: 300px;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@/components/landing/mobile.css";
 export const metadata: Metadata = {
   title: "REXX — Energy, Reimagined.",
   description:

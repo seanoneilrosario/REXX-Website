@@ -807,7 +807,7 @@ summary {
     max-width: 110px;
   }
   .product-range {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding-top: 30px;
     padding-bottom: 25px;
     gap: 25px;
@@ -816,14 +816,30 @@ summary {
     font-size: 30px;
   }
   .range-copy h2 br {
-    display: none;
+    display: block;
   }
   .range-copy .button {
     margin-top: 15px;
   }
   .products {
-    gap: 24px 18px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    gap: 18px;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #a0a0a0 #e5e5e5;
+    padding-bottom: 18px;
+  }
+  .products:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 5px;
+  }
+  .product {
+    flex: 0 0 78%;
+    min-width: 0;
+    scroll-snap-align: start;
   }
   .product h3 {
     font-size: 12px;

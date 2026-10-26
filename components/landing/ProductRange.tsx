@@ -44,7 +44,7 @@ export function ProductRange() {
 
         </ButtonLink>
       </div>
-      <div className="products" id="products">
+      <div className="products" id="products" role="region" aria-label="REXX flavours" tabIndex={0}>
         {products.map((product) => (
           <article className="product" key={product.name}>
             <Image
@@ -52,7 +52,7 @@ export function ProductRange() {
               alt={`REXX ${product.name} caffeine pouch tin`}
               width={370}
               height={354}
-              sizes="(max-width: 600px) 45vw, 20vw"
+              sizes="(max-width: 700px) 70vw, 20vw"
             />
             <h3 style={{ color: product.color }}>{product.name}</h3>
             <p>{product.description}</p>
