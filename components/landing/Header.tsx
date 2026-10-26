@@ -15,7 +15,7 @@ export function Header() {
         <a href="#faq">FAQ</a>
       </nav>
       <ButtonLink href="#updates" variant="white">
-        Get launch updates
+        Get launch updates <span aria-hidden="true">→</span>
       </ButtonLink>
     </header>
   );

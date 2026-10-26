@@ -39,7 +39,10 @@ export function ProductRange() {
           <br />
           flavours.
         </h2>
-        <ButtonLink href="#products">View the range</ButtonLink>
+        <ButtonLink href="#products">View the range 
+            <span aria-hidden="true">→</span>
+
+        </ButtonLink>
       </div>
       <div className="products" id="products">
         {products.map((product) => (

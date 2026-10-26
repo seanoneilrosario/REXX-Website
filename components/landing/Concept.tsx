@@ -27,7 +27,10 @@ export function Concept() {
           caffeine is absorbed through the oral mucosa for a clean and
           convenient energy option.
         </p>
-        <ButtonLink href="#ingredients">Explore the concept</ButtonLink>
+        <ButtonLink href="#ingredients">Explore the concept 
+            <span aria-hidden="true">→</span>
+
+        </ButtonLink>
       </div>
       <p className="concept-mantra">
         <span>

@@ -29,6 +29,8 @@ export function Hero() {
         <div className="hero-actions">
           <ButtonLink href="#range" variant="red">
             Explore REXX
+            <span aria-hidden="true">→</span>
+
           </ButtonLink>
           <ButtonLink href="#concept">Learn the concept</ButtonLink>
         </div>
@@ -36,7 +38,9 @@ export function Hero() {
           <div>
             <FeatureIcon type="energy" />
             <p>
-              30 mg caffeine
+              30 mg 
+              <br />
+              caffeine
               <br />
               per pouch<small>(proposed)</small>
             </p>

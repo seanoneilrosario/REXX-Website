@@ -24,7 +24,6 @@ export function ButtonLink({
   return (
     <a className={`button button-${variant}`} href={href}>
       {children}
-      <span aria-hidden="true">→</span>
     </a>
   );
 }

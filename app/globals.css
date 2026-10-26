@@ -229,8 +229,8 @@ h2 {
   gap: 10px;
 }
 .feature-icon {
-  width: 47px;
-  height: 47px;
+  width: 50px;
+  height: 50px;
   border: 1px solid currentColor;
   border-radius: 50%;
   display: inline-flex;
@@ -245,13 +245,14 @@ h2 {
 .hero-features p {
   font-size: 9px;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.5;
   max-width: 80px;
 }
 .hero-features small {
   display: block;
   font-size: 9px;
   text-transform: none;
+  opacity: 0.7;
 }
 /* Concept */
 .concept {
@@ -285,12 +286,12 @@ h2 {
   max-width: 400px;
 }
 .concept-copy > p:not(.section-label) {
-  font-size: 14px;
+  font-size: 17px;
   color: #737575;
   margin: 12px 0;
 }
 .concept-copy .button {
-  font-size: 9px;
+  font-size: 12px;
   padding: 8px 17px;
 }
 .concept-mantra {
@@ -385,18 +386,20 @@ h2 {
 .product img {
   width: 100%;
   height: auto;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
 }
 .product h3 {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.08em;
   margin-top: 8px;
+  font-weight: 600;
 }
 .product p {
   font-size: 11px;
   margin-top: 3px;
   color: #424646;
+  font-weight: 600;
 }
 /* Ingredients */
 .ingredients {
@@ -412,14 +415,16 @@ h2 {
   font-size: clamp(24px, 2.5vw, 36px);
 }
 .ingredients-copy > p:last-child {
-  font-size: 13px;
+  font-size: 15px;
   color: #858686;
   margin-top: 12px;
+  max-width: 280px;
 }
 .caffeine {
   border-left: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
   padding: 0 20%;
+  max-width: max-content;
 }
 .dose {
   font-size: clamp(50px, 5.8vw, 84px);
@@ -441,7 +446,8 @@ h2 {
 }
 .caffeine > p:last-child {
   color: #828484;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -451,12 +457,14 @@ h2 {
   letter-spacing: 0;
 }
 .ingredient-details {
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 .ingredient-features {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  max-width: 85%;
+  margin: auto;
 }
 .ingredient-features .feature-icon {
   width: 52px;
@@ -471,9 +479,11 @@ h2 {
   margin-top: 8px;
 }
 .ingredient-details > p {
-  font-size: 10px;
   color: #858686;
-  margin-top: 20px;
+  margin-top: 12px;
+  font-size: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #858686;
 }
 /* Story and footer */
 .story {
@@ -568,13 +578,6 @@ h2 {
   gap: 28px;
   font-size: 10px;
 }
-.footer-tagline {
-  margin-left: auto;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #888;
-}
 .footer-faq {
   font-size: 10px;
   margin-top: 18px;
@@ -655,7 +658,7 @@ summary {
     width: 35%;
   }
   .concept-copy > p:not(.section-label) {
-    font-size: 12px;
+    font-size: 15px;
   }
   .concept {
     min-height: 320px;
@@ -679,8 +682,8 @@ summary {
   .footer nav {
     gap: 18px;
   }
-  .footer-tagline {
-    display: none;
+  .footer-top {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 700px) {
@@ -917,5 +920,12 @@ summary {
   *:before,
   *:after {
     transition: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 230px 1fr 180px;
   }
 }
